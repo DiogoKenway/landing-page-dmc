@@ -1,0 +1,52 @@
+@use "../../../scss/" as *;
+
+
+
+.welcome {
+    &__content {
+        @include flex(center, center);
+    }
+
+    
+    &__img {
+        width: 25%;
+        height: 100%;
+    }
+
+    &__info {
+        width: 50%;
+        height: 100%;
+
+        &__content {
+            padding: 2rem;
+
+            .description {
+                font-size: 1.4rem;
+                letter-spacing: .1rem;
+                line-height: 150%;
+                margin-bottom: 1rem;
+                text-align: start;
+            }      
+
+        }
+    }
+
+    &__img {
+        @include flex(center, flex-end);
+        
+        &__slide {
+            height: 915px;
+            width: 915px;
+            overflow: hidden;
+
+
+            canvas {
+                width: 55% !important;
+            }
+        }
+    }
+}
+
+img {
+    width: 50% !important;
+}

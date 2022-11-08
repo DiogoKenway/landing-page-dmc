@@ -1,0 +1,12 @@
+@use "../../../scss/" as *;
+
+.bg-animation {
+    height: 100%;
+    overflow: hidden;
+    @include flex(center, center);
+
+    video {
+        position: absolute;
+    }
+
+}

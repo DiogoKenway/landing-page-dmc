@@ -1,0 +1,28 @@
+@use "../../scss/" as *;
+
+.section {
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    transition: visibility 1s ease;
+
+    &.active {
+        visibility: visible;
+    }
+
+    &.active &__content {
+        transform: scale(1);
+        opacity: 1;
+        transition-delay: .3s;
+    }
+
+    &__content {
+        position: relative;
+        height: 100%;
+        transform: scale(3);
+        opacity: 0;
+        transition: transform .6s ease, opacity .5s ease;
+        padding-top: $header-height;
+    }
+}
