@@ -3,22 +3,19 @@
 
 
 .welcome {
+
     &__content {
         @include flex(center, center);
     }
 
     
-    &__img {
-        width: 25%;
+    &__img, &__info {
+        width: 50%;
         height: 100%;
     }
 
-    &__info {
-        width: 50%;
-        height: 100%;
-
         &__content {
-            padding: 2rem;
+            padding: 5rem;
 
             .description {
                 font-size: 1.4rem;
@@ -29,24 +26,23 @@
             }      
 
         }
-    }
+    
 
     &__img {
-        @include flex(center, flex-end);
+        @include flex(center, center);
         
         &__slide {
             height: 915px;
             width: 915px;
             overflow: hidden;
+            // object-fit: fill;
 
 
             canvas {
-                width: 55% !important;
+                width: 53% !important;
+                // height: fit-content;
+                // object-fit: contain;
             }
         }
     }
-}
-
-img {
-    width: 50% !important;
 }
